@@ -1,21 +1,25 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
+
+#include "EventHandler.h"
 
 int main()
 {
-    auto window = sf::RenderWindow({1920u, 1080u}, "CMake SFML Project");
-    window.setFramerateLimit(144);
+    // VideoMode is in pixels
+    auto window = sf::RenderWindow({1080u, 800u}, "My Game"); // This implicitly creates a VideoMode object using {1920u,1080u} as an initializer list
+    window.setFramerateLimit(60);
+
+    EventHandler eventHandler(window);
 
     while (window.isOpen())
     {
-        for (auto event = sf::Event(); window.pollEvent(event);)
-        {
-            if (event.type == sf::Event::Closed)
-            {
-                window.close();
-            }
-        }
+        eventHandler.HandleEvents();
+
+        sf::CircleShape shape(50.f);
+        shape.setFillColor(sf::Color(100,250,50));
 
         window.clear();
+        window.draw(shape);
         window.display();
     }
 }
