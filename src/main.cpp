@@ -6,14 +6,16 @@
 #include "EventHandler.h"
 #include "Ball.h"
 #include "StarShape.h"
+#include "Player.h"
+#include "Global.h"
 
-std::string texturesPath = "..\\..\\..\\assets\\textures\\";
+using namespace Global;
 
 int main()
 {
     // VideoMode is in pixels
     auto window = sf::RenderWindow({1080u, 800u}, "My Game"); // This implicitly creates a VideoMode object using {1920u,1080u} as an initializer list
-    window.setFramerateLimit(60);
+    window.setFramerateLimit(30);
 
     EventHandler eventHandler(window);
 
@@ -28,8 +30,8 @@ int main()
     sf::Texture texture2;
     texture2.loadFromFile(texturesPath+"desert_outback_ground_mud_rocky__01_xikxcgl_2k\\Desert_Outback_Ground_Mud_Rocky__01_xikxcgl_2K_BaseColor.jpg", sf::IntRect(100, 100, 1000, 1000));
 
-    sf::Texture texture3;
-    texture3.loadFromFile("..\\..\\..\\assets\\Pirate Bomb\\Sprites\\1-Player-Bomb Guy\\1-Idle\\1.png");
+    sf::Texture playerTexture;
+    playerTexture.loadFromFile(spritesPath+"\\sprite_sheet.png");
 
     sf::CircleShape circle(50.f);
     circle.setPosition(10.f, 50.f);
@@ -40,8 +42,7 @@ int main()
     star.setTexture(&texture2);
     star.setPosition(300.f, 200.f); // Move it to the desired position
 
-    sf::Sprite sprite;
-    sprite.setTexture(texture3);
+    Player player("sprite_sheet");
 
     while (window.isOpen())
     {
@@ -51,8 +52,8 @@ int main()
 
         window.clear();
         window.draw(circle);
-        window.draw(star);
-        window.draw(sprite);
+        window.draw(player.getSprite());
         window.display();
+        player.updateSprite();
     }
 }
