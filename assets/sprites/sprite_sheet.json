@@ -1,0 +1,191 @@
+{
+  "sprites": [
+    {
+      "fileName": "1.png",
+      "width": 58,
+      "height": 58,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "fileName": "10.png",
+      "width": 58,
+      "height": 58,
+      "x": 58,
+      "y": 0
+    },
+    {
+      "fileName": "11.png",
+      "width": 58,
+      "height": 58,
+      "x": 0,
+      "y": 58
+    },
+    {
+      "fileName": "12.png",
+      "width": 58,
+      "height": 58,
+      "x": 58,
+      "y": 58
+    },
+    {
+      "fileName": "13.png",
+      "width": 58,
+      "height": 58,
+      "x": 116,
+      "y": 0
+    },
+    {
+      "fileName": "14.png",
+      "width": 58,
+      "height": 58,
+      "x": 116,
+      "y": 58
+    },
+    {
+      "fileName": "15.png",
+      "width": 58,
+      "height": 58,
+      "x": 0,
+      "y": 116
+    },
+    {
+      "fileName": "16.png",
+      "width": 58,
+      "height": 58,
+      "x": 58,
+      "y": 116
+    },
+    {
+      "fileName": "17.png",
+      "width": 58,
+      "height": 58,
+      "x": 116,
+      "y": 116
+    },
+    {
+      "fileName": "18.png",
+      "width": 58,
+      "height": 58,
+      "x": 174,
+      "y": 0
+    },
+    {
+      "fileName": "19.png",
+      "width": 58,
+      "height": 58,
+      "x": 174,
+      "y": 58
+    },
+    {
+      "fileName": "2.png",
+      "width": 58,
+      "height": 58,
+      "x": 174,
+      "y": 116
+    },
+    {
+      "fileName": "20.png",
+      "width": 58,
+      "height": 58,
+      "x": 0,
+      "y": 174
+    },
+    {
+      "fileName": "21.png",
+      "width": 58,
+      "height": 58,
+      "x": 58,
+      "y": 174
+    },
+    {
+      "fileName": "22.png",
+      "width": 58,
+      "height": 58,
+      "x": 116,
+      "y": 174
+    },
+    {
+      "fileName": "23.png",
+      "width": 58,
+      "height": 58,
+      "x": 174,
+      "y": 174
+    },
+    {
+      "fileName": "24.png",
+      "width": 58,
+      "height": 58,
+      "x": 232,
+      "y": 0
+    },
+    {
+      "fileName": "25.png",
+      "width": 58,
+      "height": 58,
+      "x": 232,
+      "y": 58
+    },
+    {
+      "fileName": "26.png",
+      "width": 58,
+      "height": 58,
+      "x": 232,
+      "y": 116
+    },
+    {
+      "fileName": "3.png",
+      "width": 58,
+      "height": 58,
+      "x": 232,
+      "y": 174
+    },
+    {
+      "fileName": "4.png",
+      "width": 58,
+      "height": 58,
+      "x": 0,
+      "y": 232
+    },
+    {
+      "fileName": "5.png",
+      "width": 58,
+      "height": 58,
+      "x": 58,
+      "y": 232
+    },
+    {
+      "fileName": "6.png",
+      "width": 58,
+      "height": 58,
+      "x": 116,
+      "y": 232
+    },
+    {
+      "fileName": "7.png",
+      "width": 58,
+      "height": 58,
+      "x": 174,
+      "y": 232
+    },
+    {
+      "fileName": "8.png",
+      "width": 58,
+      "height": 58,
+      "x": 232,
+      "y": 232
+    },
+    {
+      "fileName": "9.png",
+      "width": 58,
+      "height": 58,
+      "x": 290,
+      "y": 0
+    }
+  ],
+  "packMode": "bin",
+  "padding": 0,
+  "backgroundColor": "rgba(0, 0, 0, 0)",
+  "spriteSheetWidth": 348,
+  "spriteSheetHeight": 290
+}
