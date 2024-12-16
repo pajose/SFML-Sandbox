@@ -1,6 +1,8 @@
 #include "EventHandler.h"
 
-EventHandler::EventHandler(sf::RenderWindow& window) : m_window(window) {}
+EventHandler::EventHandler(sf::RenderWindow& window, Player& player) 
+    : m_window(window), m_player(player)
+    {}
 
 EventHandler::~EventHandler() {}
 
@@ -13,10 +15,22 @@ void EventHandler::HandleEvents() {
                     m_window.close();
                     break;
                 case sf::Event::TextEntered:
-                    if (event.text.unicode < 128) {
-                        std::cout << "Character entered: " << static_cast<char>(event.text.unicode) << std::endl;
-                    }
                     break;
+                case sf::Event::KeyPressed:
+                    switch (event.key.scancode) {
+                        case sf::Keyboard::Scan::W:
+                            m_player.moveUp();
+                            break;
+                        case sf::Keyboard::Scan::A:
+                            m_player.moveLeft();
+                            break;
+                        case sf::Keyboard::Scan::S:
+                            m_player.moveDown();
+                            break;
+                        case sf::Keyboard::Scan::D:
+                            m_player.moveRight();
+                            break;
+                    }
             }
         }
 }

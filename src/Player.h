@@ -19,9 +19,14 @@ private:
     sf::Texture m_texture;
     std::unordered_map<int,SpriteSheet> m_spriteSheetData;
     int m_currSprite = 0;
+    float m_movementSpeed = 10.0;
 public:
     Player(const std::string& textureName);
     sf::Sprite& getSprite();
     void loadSpriteSheet(const std::string& spriteName);
     void updateSprite();
+    void moveUp();
+    void moveDown();
+    void moveRight();
+    void moveLeft();
 };

@@ -3,7 +3,7 @@
 using json = nlohmann::json;
 
 Player::Player(const std::string& spriteName) {
-    m_texture.loadFromFile(Global::spritesPath+spriteName+".png");
+    
     loadSpriteSheet(spriteName);
 
     m_sprite.setTexture(m_texture);
@@ -16,6 +16,8 @@ sf::Sprite& Player::getSprite() {
 }
 
 void Player::loadSpriteSheet(const std::string& spriteName) {
+    m_texture.loadFromFile(Global::spritesPath+spriteName+".png");
+    
     std::ifstream f(Global::spritesPath+spriteName+".json");
     json sprite_sheet = json::parse(f);
     for (const auto& sprite: sprite_sheet["sprites"]) {
@@ -37,4 +39,17 @@ void Player::updateSprite() {
     int x = m_spriteSheetData[m_currSprite].x;
     int y = m_spriteSheetData[m_currSprite].y;
     m_sprite.setTextureRect({x,y,width,height});
+}
+
+void Player::moveUp() {
+    m_sprite.move(0,-m_movementSpeed);
+}
+void Player::moveDown() {
+    m_sprite.move(0,m_movementSpeed);
+}
+void Player::moveRight() {
+    m_sprite.move(m_movementSpeed,0);
+}
+void Player::moveLeft() {
+    m_sprite.move(-m_movementSpeed,0);
 }
