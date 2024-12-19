@@ -19,18 +19,49 @@ void EventHandler::HandleEvents() {
                 case sf::Event::KeyPressed:
                     switch (event.key.scancode) {
                         case sf::Keyboard::Scan::W:
-                            m_player.moveUp();
+                            m_player.setMovement(Player::UP);
                             break;
                         case sf::Keyboard::Scan::A:
-                            m_player.moveLeft();
+                            m_player.setMovement(Player::LEFT);
                             break;
                         case sf::Keyboard::Scan::S:
-                            m_player.moveDown();
+                            m_player.setMovement(Player::DOWN);
                             break;
                         case sf::Keyboard::Scan::D:
-                            m_player.moveRight();
+                            m_player.setMovement(Player::RIGHT);
                             break;
                     }
+                    break;
+                case sf::Event::KeyReleased:
+                    // Need to check that character released is what is the current movement, in case a different key was pressed
+                    // while first key was still pressed
+                    Player::Movement currMove = m_player.getMovement();
+                    if (m_player.getMovement() == event.key.scancode) {
+                        m_player.setMovement(Player::IDLE);
+                    }
+                    switch (event.key.scancode) {
+                        case sf::Keyboard::Scan::W:
+                            if (m_player.getMovement() == Player::UP) {
+                                m_player.setMovement(Player::IDLE);
+                            }
+                            break;
+                        case sf::Keyboard::Scan::A:
+                            if (m_player.getMovement() == Player::LEFT) {
+                                m_player.setMovement(Player::IDLE);
+                            }
+                            break;
+                        case sf::Keyboard::Scan::S:
+                            if (m_player.getMovement() == Player::DOWN) {
+                                m_player.setMovement(Player::IDLE);
+                            }
+                            break;
+                        case sf::Keyboard::Scan::D:
+                            if (m_player.getMovement() == Player::RIGHT) {
+                                m_player.setMovement(Player::IDLE);
+                            }
+                            break;
+                    }
+                    break;
             }
         }
 }

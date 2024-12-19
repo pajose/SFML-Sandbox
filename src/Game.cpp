@@ -2,10 +2,8 @@
 
 Game::Game() 
     : circle(50.f), star(100.f, 5), window({1080u, 800u}, "My Game"), eventHandler(window, player),
-    player("sprite_sheet"), ball(circle, window) {
+    player("idle"), ball(circle, window) {
     
-    window.setFramerateLimit(20);
-
 }
 
 Game::~Game() {}
@@ -22,13 +20,13 @@ void Game::Init() {
 
     circle.setPosition(10.f, 50.f);
     circle.setTexture(&groundRockyTexture);
-    // Ball ball(circle, window);
 
     // StarShape star(100.f, 5); // Star with radius 100 and 5 points
     star.setTexture(&mudRockyTexture);
     star.setPosition(300.f, 200.f); // Move it to the desired position
 
-    // Player player("sprite_sheet");
+    player.init();
+
 }
 
 void Game::Run() {
@@ -42,6 +40,6 @@ void Game::Run() {
         // window.draw(circle);
         window.draw(player.getSprite());
         window.display();
-        player.updateSprite();
+        player.update();
     }
 }
