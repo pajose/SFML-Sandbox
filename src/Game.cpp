@@ -8,7 +8,7 @@ Game::Game()
 
 Game::~Game() {}
 
-void Game::Init() {
+void Game::init() {
     // VideoMode is in pixels
     // auto window = sf::RenderWindow({1080u, 800u}, "My Game"); // This implicitly creates a VideoMode object using {1920u,1080u} as an initializer list
     window.setFramerateLimit(20);
@@ -29,7 +29,7 @@ void Game::Init() {
 
 }
 
-void Game::Run() {
+void Game::run() {
     while (window.isOpen())
     {
         eventHandler.HandleEvents();
