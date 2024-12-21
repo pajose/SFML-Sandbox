@@ -10,6 +10,6 @@ using namespace Global;
 int main()
 {
     Game game;
-    game.Init();
-    game.Run();
+    game.init();
+    game.run();
 }
