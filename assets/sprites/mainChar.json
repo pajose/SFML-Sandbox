@@ -1,0 +1,289 @@
+{
+  "sprites": [
+    {
+      "fileName": "idle-1.png",
+      "width": 58,
+      "height": 58,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "fileName": "idle-10.png",
+      "width": 58,
+      "height": 58,
+      "x": 58,
+      "y": 0
+    },
+    {
+      "fileName": "idle-11.png",
+      "width": 58,
+      "height": 58,
+      "x": 116,
+      "y": 0
+    },
+    {
+      "fileName": "idle-12.png",
+      "width": 58,
+      "height": 58,
+      "x": 174,
+      "y": 0
+    },
+    {
+      "fileName": "idle-13.png",
+      "width": 58,
+      "height": 58,
+      "x": 232,
+      "y": 0
+    },
+    {
+      "fileName": "idle-14.png",
+      "width": 58,
+      "height": 58,
+      "x": 290,
+      "y": 0
+    },
+    {
+      "fileName": "idle-15.png",
+      "width": 58,
+      "height": 58,
+      "x": 348,
+      "y": 0
+    },
+    {
+      "fileName": "idle-16.png",
+      "width": 58,
+      "height": 58,
+      "x": 0,
+      "y": 58
+    },
+    {
+      "fileName": "idle-17.png",
+      "width": 58,
+      "height": 58,
+      "x": 58,
+      "y": 58
+    },
+    {
+      "fileName": "idle-18.png",
+      "width": 58,
+      "height": 58,
+      "x": 116,
+      "y": 58
+    },
+    {
+      "fileName": "idle-19.png",
+      "width": 58,
+      "height": 58,
+      "x": 174,
+      "y": 58
+    },
+    {
+      "fileName": "idle-2.png",
+      "width": 58,
+      "height": 58,
+      "x": 232,
+      "y": 58
+    },
+    {
+      "fileName": "idle-20.png",
+      "width": 58,
+      "height": 58,
+      "x": 290,
+      "y": 58
+    },
+    {
+      "fileName": "idle-21.png",
+      "width": 58,
+      "height": 58,
+      "x": 348,
+      "y": 58
+    },
+    {
+      "fileName": "idle-22.png",
+      "width": 58,
+      "height": 58,
+      "x": 0,
+      "y": 116
+    },
+    {
+      "fileName": "idle-23.png",
+      "width": 58,
+      "height": 58,
+      "x": 58,
+      "y": 116
+    },
+    {
+      "fileName": "idle-24.png",
+      "width": 58,
+      "height": 58,
+      "x": 116,
+      "y": 116
+    },
+    {
+      "fileName": "idle-25.png",
+      "width": 58,
+      "height": 58,
+      "x": 174,
+      "y": 116
+    },
+    {
+      "fileName": "idle-26.png",
+      "width": 58,
+      "height": 58,
+      "x": 232,
+      "y": 116
+    },
+    {
+      "fileName": "idle-3.png",
+      "width": 58,
+      "height": 58,
+      "x": 290,
+      "y": 116
+    },
+    {
+      "fileName": "idle-4.png",
+      "width": 58,
+      "height": 58,
+      "x": 348,
+      "y": 116
+    },
+    {
+      "fileName": "idle-5.png",
+      "width": 58,
+      "height": 58,
+      "x": 0,
+      "y": 174
+    },
+    {
+      "fileName": "idle-6.png",
+      "width": 58,
+      "height": 58,
+      "x": 58,
+      "y": 174
+    },
+    {
+      "fileName": "idle-7.png",
+      "width": 58,
+      "height": 58,
+      "x": 116,
+      "y": 174
+    },
+    {
+      "fileName": "idle-8.png",
+      "width": 58,
+      "height": 58,
+      "x": 174,
+      "y": 174
+    },
+    {
+      "fileName": "idle-9.png",
+      "width": 58,
+      "height": 58,
+      "x": 232,
+      "y": 174
+    },
+    {
+      "fileName": "run-1.png",
+      "width": 58,
+      "height": 58,
+      "x": 290,
+      "y": 174
+    },
+    {
+      "fileName": "run-10.png",
+      "width": 58,
+      "height": 58,
+      "x": 348,
+      "y": 174
+    },
+    {
+      "fileName": "run-11.png",
+      "width": 58,
+      "height": 58,
+      "x": 0,
+      "y": 232
+    },
+    {
+      "fileName": "run-12.png",
+      "width": 58,
+      "height": 58,
+      "x": 58,
+      "y": 232
+    },
+    {
+      "fileName": "run-13.png",
+      "width": 58,
+      "height": 58,
+      "x": 116,
+      "y": 232
+    },
+    {
+      "fileName": "run-14.png",
+      "width": 58,
+      "height": 58,
+      "x": 174,
+      "y": 232
+    },
+    {
+      "fileName": "run-2.png",
+      "width": 58,
+      "height": 58,
+      "x": 232,
+      "y": 232
+    },
+    {
+      "fileName": "run-3.png",
+      "width": 58,
+      "height": 58,
+      "x": 290,
+      "y": 232
+    },
+    {
+      "fileName": "run-4.png",
+      "width": 58,
+      "height": 58,
+      "x": 348,
+      "y": 232
+    },
+    {
+      "fileName": "run-5.png",
+      "width": 58,
+      "height": 58,
+      "x": 0,
+      "y": 290
+    },
+    {
+      "fileName": "run-6.png",
+      "width": 58,
+      "height": 58,
+      "x": 58,
+      "y": 290
+    },
+    {
+      "fileName": "run-7.png",
+      "width": 58,
+      "height": 58,
+      "x": 116,
+      "y": 290
+    },
+    {
+      "fileName": "run-8.png",
+      "width": 58,
+      "height": 58,
+      "x": 174,
+      "y": 290
+    },
+    {
+      "fileName": "run-9.png",
+      "width": 58,
+      "height": 58,
+      "x": 232,
+      "y": 290
+    }
+  ],
+  "packMode": "grid",
+  "padding": 0,
+  "backgroundColor": "rgba(0, 0, 0, 0)",
+  "spriteSheetWidth": 406,
+  "spriteSheetHeight": 348
+}
