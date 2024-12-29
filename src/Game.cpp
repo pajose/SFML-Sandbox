@@ -35,11 +35,11 @@ void Game::run() {
         eventHandler.HandleEvents();
 
         // ball.Move();
+        player.update();
 
         window.clear();
         // window.draw(circle);
         window.draw(player.getSprite());
         window.display();
-        player.update();
     }
 }

@@ -2,6 +2,7 @@
 
 #include <string>
 #include <fstream>
+#include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Global.h"
 #include "nlohmann/json.hpp"
@@ -20,7 +21,7 @@ public:
     ~Player();
     void init();
     sf::Sprite& getSprite();
-    void loadSpriteSheetData(const std::string& spriteName);
+    void loadSpriteSheetData();
     void update();
     void updateSprite();
     void moveUp();
@@ -39,9 +40,9 @@ private:
     };
 
     sf::Sprite m_sprite;
-    // sf::Texture m_idleTexture;
-    // sf::Texture m_runTexture;
+    sf::Texture m_texture;
     std::string m_currTexture;
+    std::string m_textureName = "mainChar";
     std::unordered_map<std::string, sf::Texture*> m_textures;
     std::unordered_map<std::string, std::unordered_map<int,SpriteSheet>> m_spriteSheetData;
     int m_currSprite = 0;
