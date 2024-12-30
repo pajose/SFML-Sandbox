@@ -7,9 +7,6 @@ Player::Player(const std::string& spriteName) {
 }
 
 Player::~Player() {
-    for (auto& texture : m_textures) {
-        delete texture.second;
-    }
 }
 
 void Player::init() {
@@ -31,13 +28,14 @@ void Player::loadSpriteSheetData() {
     json sprite_sheet = json::parse(f);
     for (const auto& sprite: sprite_sheet["sprites"]) {
         std::string fileName = sprite["fileName"];
-        std::string moveAnimation = fileName.substr(0,fileName.find('-'));
-        int animationNum = std::stoi(fileName.substr(fileName.find('-')+1, fileName.find('.')));
+        std::string moveAnimation = fileName.substr(0,fileName.find('_'));
+        int orientation = fileName.substr(fileName.find('_')+1, fileName.find('-') - fileName.find('_')-1) == "left" ? 0 : 1;
+        int animationNum = std::stoi(fileName.substr(fileName.find('-')+1, fileName.find('.') - fileName.find('-')-1));
         int width = sprite["width"];
         int height = sprite["height"];
         int x = sprite["x"];
         int y = sprite["y"];
-        m_spriteSheetData[moveAnimation][animationNum-1] = {width,height,x,y};
+        m_spriteSheetData[orientation][moveAnimation][animationNum-1] = {width,height,x,y};
     }
 }
 
@@ -73,11 +71,11 @@ void Player::update() {
 }
 
 void Player::updateSprite() {
-    m_currSprite = ((m_currSprite+1) % m_spriteSheetData[m_currTexture].size());
-    int width = m_spriteSheetData[m_currTexture][m_currSprite].width;
-    int height = m_spriteSheetData[m_currTexture][m_currSprite].height;
-    int x = m_spriteSheetData[m_currTexture][m_currSprite].x;
-    int y = m_spriteSheetData[m_currTexture][m_currSprite].y;
+    m_currSprite = ((m_currSprite+1) % m_spriteSheetData[m_orientation][m_currTexture].size());
+    int width = m_spriteSheetData[m_orientation][m_currTexture][m_currSprite].width;
+    int height = m_spriteSheetData[m_orientation][m_currTexture][m_currSprite].height;
+    int x = m_spriteSheetData[m_orientation][m_currTexture][m_currSprite].x;
+    int y = m_spriteSheetData[m_orientation][m_currTexture][m_currSprite].y;
     m_sprite.setTextureRect({x,y,width,height});
 }
 
@@ -88,9 +86,11 @@ void Player::moveDown() {
     m_sprite.move(0,m_movementSpeed);
 }
 void Player::moveRight() {
+    m_orientation = 1;
     m_sprite.move(m_movementSpeed,0);
 }
 void Player::moveLeft() {
+    m_orientation = 0;
     m_sprite.move(-m_movementSpeed,0);
 }
 

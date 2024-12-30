@@ -43,9 +43,10 @@ private:
     sf::Texture m_texture;
     std::string m_currTexture;
     std::string m_textureName = "mainChar";
-    std::unordered_map<std::string, sf::Texture*> m_textures;
-    std::unordered_map<std::string, std::unordered_map<int,SpriteSheet>> m_spriteSheetData;
-    int m_currSprite = 0;
+    int m_orientation = 1;
+    // Index 0 is facing left, index 1 is facing right
+    std::array<std::unordered_map<std::string, std::unordered_map<int,SpriteSheet>>, 2> m_spriteSheetData;
+    int m_currSprite = -1;
     float m_movementSpeed = 10.0;
     Movement m_move = IDLE;
     Movement m_prevAnimation = IDLE;
